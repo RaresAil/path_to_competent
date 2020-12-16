@@ -2,7 +2,7 @@ const { expect } = require('chai');
 
 const app = require('../app/symbol');
 
-describe('App | symbol.js', () => {
+describe('App | Symbol', () => {
   it("Symbols can't be equal", () => {
     expect(Symbol('')).to.not.be.deep.equal(Symbol(''));
   });

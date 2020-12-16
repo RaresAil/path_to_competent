@@ -3,7 +3,7 @@ const { expect } = require('chai');
 const storeData = require('../mocks/store');
 const app = require('../app/map_reduce');
 
-describe('App | map.js', () => {
+describe('App | Map', () => {
   it('Should convert object to map', async () => {
     const input = {
       a: 1,

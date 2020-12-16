@@ -2,7 +2,7 @@ const { expect } = require('chai');
 
 const app = require('../app/immutability');
 
-describe('App | immutability.js', () => {
+describe('App | Immutability', () => {
   it("Changing a parent's key should change the same key for the clone object", () => {
     const clone = app.parent;
     expect(clone.a).to.be.deep.equal(1);

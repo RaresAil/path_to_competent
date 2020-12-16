@@ -7,7 +7,7 @@ const app = require('../app/pure_function');
  * it will always produce the same output.
  */
 
-describe('App | pure_function.js', () => {
+describe('App | Pure Functions', () => {
   it('Should return true for all the function calls', () => {
     expect(app.isHigher(2, 1)).to.be.deep.equal(true);
     expect(app.isHigher(9999, 99)).to.be.deep.equal(true);
