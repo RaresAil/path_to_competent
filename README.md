@@ -18,3 +18,4 @@ The function `Object.fromEntries` was not in node v10 so i had to Polyfill that 
 6. Polyfilling
 7. High Order Functions
 8. Classes & Prototype
+9. Event Loop & Threads
