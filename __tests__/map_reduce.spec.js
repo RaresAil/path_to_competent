@@ -20,8 +20,8 @@ describe('App | Map', () => {
 
     const result = app.objectToMap(input);
 
-    expect(input instanceof Map).to.be.equal(false);
-    expect(result instanceof Map).to.be.equal(true);
+    expect(input instanceof Map).to.be.deep.equal(false);
+    expect(result instanceof Map).to.be.deep.equal(true);
     expect(expected).to.be.deep.equal(result);
   });
 
@@ -39,8 +39,8 @@ describe('App | Map', () => {
       c: 3
     };
 
-    expect(input instanceof Map).to.be.equal(true);
-    expect(result instanceof Map).to.be.equal(false);
+    expect(input instanceof Map).to.be.deep.equal(true);
+    expect(result instanceof Map).to.be.deep.equal(false);
     expect(expected).to.be.deep.equal(result);
   });
 
