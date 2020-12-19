@@ -3,7 +3,7 @@
 const { expect } = require('chai');
 const app = require('../app/transpiling');
 
-describe.only('App | Transpiling', () => {
+describe('App | Transpiling', () => {
   it('Transpile ES6 class and expect an array of 2 car plates', async () => {
     await app.transpile();
     const result = await app.runTranspiledScript();
