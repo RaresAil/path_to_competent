@@ -29,7 +29,7 @@ const chars = [
   'Z'
 ];
 
-const randomLetter = () => chars[Math.floor(Math.random() * 27)];
+const randomLetter = () => chars[Math.floor(Math.random() * 26)];
 
 module.exports = (region) => {
   const code = Math.floor(Math.random() * 1000)

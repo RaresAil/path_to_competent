@@ -21,3 +21,4 @@ The function `Object.fromEntries` was not in node v10 so i had to Polyfill that 
 9. Event Loop & Threads
 10. Arrow Functions & this
 11. Coercion
+12. Transpiling & Regex
