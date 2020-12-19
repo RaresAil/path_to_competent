@@ -15,7 +15,7 @@ Object.defineProperty(Car, 'numberOfCreatedCars', {
 });
 
 // Constructor
-function Car(owner, name, model) {
+function Car(owner, name, model, region) {
   numberOfCreatedCars++;
 
   this.owner = owner;
@@ -42,14 +42,14 @@ function Car(owner, name, model) {
   });
   // Private Setter
   Object.defineProperty(this, carNumber, {
-    value: carPlateGenerator('NT'),
+    value: carPlateGenerator(region || 'NT'),
     enumerable: false,
     writable: true
   });
 }
 
 Car.prototype.generateNewNumber = function (region) {
-  this[carNumber] = carPlateGenerator('NT');
+  this[carNumber] = carPlateGenerator(region);
 };
 
 module.exports = {

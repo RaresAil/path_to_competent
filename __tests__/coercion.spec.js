@@ -3,7 +3,7 @@
 const { expect } = require('chai');
 const app = require('../app/coercion');
 
-describe.only('App | Coercion', () => {
+describe('App | Coercion', () => {
   describe('Implicit Conversions', () => {
     it('Should return 2 as an Int from string', () => {
       expect(app.implicitInt).to.be.deep.equal(2);
