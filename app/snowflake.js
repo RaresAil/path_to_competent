@@ -4,19 +4,19 @@ const crypto = require('crypto');
 let lastCreatedID = '';
 
 /**
- * Unused        48 Bits           10 Bits         12 Bits
- * -------------------------------------------------------------
- * |     |                     |              |                |
- * |  0  |  000000....0000000  |  0000000000  |  000000000000  |
- * |     |                     |              |                |
- * -------------------------------------------------------------
+ *         42 Bits           10 Bits         12 Bits       -> 64 Bit -> MD5 Hex
+ * -------------------------------------------------------
+ * |                     |              |                |
+ * |  000000....0000000  |  0000000000  |  000000000000  |
+ * |                     |              |                |
+ * -------------------------------------------------------
  */
 const createUID = (workerId, sequenceId) =>
   crypto
     .createHash('md5')
     .update(
       parseInt(
-        `0${Date.now().toString(2).padStart(48, '0')}${(workerId || 0)
+        `${Date.now().toString(2).padStart(42, '0')}${(workerId || 0)
           .toString(2)
           .padStart(10, '0')}${(sequenceId || 0)
           .toString(2)
