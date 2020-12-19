@@ -33,6 +33,34 @@ describe('App | Classes & Prototype', () => {
     expect(car.number).to.not.be.deep.equal('LOREM');
   });
 
+  it('Should not be able to change the model and/or name | Use Strict & TypeError', () => {
+    'use strict';
+
+    expect(car.name).to.be.deep.equal('A');
+    expect(car.model).to.be.deep.equal('1');
+
+    try {
+      car.name = 'B';
+      car.model = '2';
+    } catch ({ message }) {
+      expect(message).to.be.deep.equal(
+        "Cannot assign to read only property 'name' of object '#<Car>'"
+      );
+    }
+  });
+
+  it('Should not be able to change the car number without using the function | Use Strict & TypeError', () => {
+    'use strict';
+
+    try {
+      car.number = 'LOREM';
+    } catch ({ message }) {
+      expect(message).to.be.deep.equal(
+        'Cannot set property number of #<Car> which has only a getter'
+      );
+    }
+  });
+
   it('Check the static variable for Car', () => {
     expect(Car.numberOfCreatedCars).to.be.deep.equal(1);
     const _ = new Car();

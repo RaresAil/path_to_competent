@@ -1,3 +1,5 @@
+'use strict';
+
 const parent = {
   a: 1
 };

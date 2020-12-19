@@ -1,3 +1,5 @@
+'use strict';
+
 const toExport = {};
 
 const sortByPrice = ({ pricePerUnit: priceA }, { pricePerUnit: priceB }) =>

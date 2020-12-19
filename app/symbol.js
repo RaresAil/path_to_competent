@@ -1,3 +1,5 @@
+'use strict';
+
 const privateSymbol = Symbol('private');
 
 const object = {

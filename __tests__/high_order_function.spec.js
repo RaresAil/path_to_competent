@@ -1,3 +1,5 @@
+'use strict';
+
 const app = require('../app/high_order_function');
 const { input: collection, expected } = require('../mocks/store');
 const { expect } = require('chai');

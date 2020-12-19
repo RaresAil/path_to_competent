@@ -1,3 +1,5 @@
+'use strict';
+
 const fromEntriesPolyfill = require('../polyfill/fromEntries');
 const define = require('define-properties');
 

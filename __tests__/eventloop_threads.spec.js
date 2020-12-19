@@ -1,3 +1,5 @@
+'use strict';
+
 const { exec } = require('child_process');
 const { expect } = require('chai');
 const path = require('path');

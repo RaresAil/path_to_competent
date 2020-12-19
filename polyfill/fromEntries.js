@@ -1,3 +1,5 @@
+'use strict';
+
 const AddEntriesFromIterable = require('es-abstract/2020/AddEntriesFromIterable');
 const CreateDataPropertyOrThrow = require('es-abstract/2020/CreateDataPropertyOrThrow');
 const RequireObjectCoercible = require('es-abstract/2020/RequireObjectCoercible');

@@ -1,3 +1,5 @@
+'use strict';
+
 const carPlateGenerator = require('../utils/carPlateGenerator');
 
 // Symbols

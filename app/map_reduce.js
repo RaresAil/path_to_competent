@@ -1,3 +1,5 @@
+'use strict';
+
 const mapToObject = (map) => Object.fromEntries(map.entries());
 const objectToMap = (obj) => new Map(Object.entries(obj));
 
