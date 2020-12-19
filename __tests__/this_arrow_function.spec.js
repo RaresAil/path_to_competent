@@ -18,6 +18,13 @@ describe('App | `this` with Arrow Functions', () => {
     expect(scope1).to.be.deep.equal(scope2);
   });
 
+  it('Function `globalObject.bindGlobalMethod` should return the same value as `globalObject.globalMethod`', () => {
+    const scope1 = app.globalObject.globalMethod();
+    const scope2 = app.globalObject.bindGlobalMethod();
+
+    expect(scope1).to.be.deep.equal(scope2);
+  });
+
   it('Function `globalObject.objectMethod` should return a diff value from `globalObject.globalMethod`', () => {
     const scope1 = app.globalObject.globalMethod();
     const scope2 = app.globalObject.objectMethod();

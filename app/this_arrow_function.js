@@ -8,14 +8,15 @@ const toExport = {};
 
 this.globalOne = 'Global Scope';
 
-toExport.globalScopeArrow = () => {
-  return this;
-};
+toExport.globalScopeArrow = () => this;
 
 toExport.globalObject = {
   globalMethod: () => this,
   objectMethod: function () {
     return this;
+  },
+  bindGlobalMethod: function () {
+    return toExport.globalScopeArrow.bind(toExport.globalObject)();
   }
 };
 

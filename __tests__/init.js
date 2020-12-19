@@ -7,7 +7,7 @@ if (!Object.fromEntries) {
   define(Object, {
     fromEntries: fromEntriesPolyfill
   }, {
-    fromEntries: function test() {
+    fromEntries: function () {
       return Object.fromEntries !== fromEntriesPolyfill;
     }
   });
