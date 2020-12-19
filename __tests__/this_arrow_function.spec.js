@@ -4,7 +4,7 @@ const { expect } = require('chai');
 
 const app = require('../app/this_arrow_function');
 
-describe.only('App | `this` with Arrow Functions', () => {
+describe('App | `this` with Arrow Functions', () => {
   it('Function `globalScopeArrow` should have `globalOne` variable defined', () => {
     const { globalOne } = app.globalScopeArrow();
 
