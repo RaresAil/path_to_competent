@@ -25,4 +25,12 @@ describe('App | Pure Functions', () => {
       false
     );
   });
+
+  it('Should not return the same value because function is not pure', () => {
+    expect(app.sum(-1)).to.be.deep.equal(-1);
+
+    app.updateC();
+
+    expect(app.sum(-1)).to.not.be.deep.equal(-1);
+  });
 });

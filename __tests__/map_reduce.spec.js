@@ -50,4 +50,18 @@ describe('App | Map', () => {
 
     expect(input).to.be.deep.equal(expected);
   });
+
+  it('Should iterate Map with forEach()', async () => {
+    const input = new Map();
+    input.set('a', 1);
+    input.set('b', 2);
+    input.set('c', 3);
+
+    let sum = 0;
+    input.forEach((value) => {
+      sum += value;
+    });
+
+    expect(sum).to.be.deep.equal(6);
+  });
 });
