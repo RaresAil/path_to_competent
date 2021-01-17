@@ -6,8 +6,8 @@ const { expect } = require('chai');
 
 describe('App | High Order Functions', () => {
   it('Use the filter function to get only the fruits', () => {
-    const fruis = app.getFruits(collection);
-    expect(fruis).to.be.deep.equal(expected.fruits);
+    const fruits = app.getFruits(collection);
+    expect(fruits).to.be.deep.equal(expected.fruits);
   });
 
   it('Use the filter function to get only the vegetables', () => {
@@ -16,8 +16,8 @@ describe('App | High Order Functions', () => {
   });
 
   it('Use the sort function to get the most expensive fruit', () => {
-    const fruis = app.getFruits(collection);
-    const mostExpensive = app.getMostExpensive(fruis);
+    const fruits = app.getFruits(collection);
+    const mostExpensive = app.getMostExpensive(fruits);
 
     expect(mostExpensive.pricePerUnit).to.be.deep.equal(14.99);
   });
