@@ -6,6 +6,10 @@ try {
   const { expect } = require('chai');
   const app = require('../app/workers');
 
+  /**
+   * Each worker will have its own instance of V8 and Event Loop.
+   * However, unlike child processes, Workers can share memory.
+   */
   describe('App | Workers', () => {
     it('Create 2 hashes using different Workers', (done) => {
       const start = Date.now();
@@ -36,9 +40,7 @@ try {
     });
   });
 } catch (e) {
-  if (e instanceof Error && e.code === 'MODULE_NOT_FOUND') {
-    describe.skip('App | Workers', () => {});
-  } else {
+  if (!(e instanceof Error && e.code === 'MODULE_NOT_FOUND')) {
     throw e;
   }
 }
