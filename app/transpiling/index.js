@@ -21,8 +21,8 @@ const transpile = async () => {
           }
 
           resolve();
-        } catch (error) {
-          return reject(error);
+        } catch (err) {
+          return reject(err);
         }
       }
     );
@@ -42,8 +42,8 @@ const runTranspiledScript = () =>
         }
 
         resolve(JSON.parse(stdout));
-      } catch (error) {
-        return reject(error);
+      } catch (err) {
+        return reject(err);
       }
     })
   );

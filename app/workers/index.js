@@ -42,8 +42,8 @@ const create2Hashes = (password, callback) => {
         }
 
         callback(JSON.parse(stdout));
-      } catch (error) {
-        return callback(null, error);
+      } catch (err) {
+        return callback(null, err);
       }
     }
   );

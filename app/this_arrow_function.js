@@ -6,18 +6,22 @@ const toExport = {};
  * called "lexical scoping"
  */
 
-this.globalOne = 'Global Scope';
+function GScope() {
+  this.globalOne = 'Global Scope';
 
-toExport.globalScopeArrow = () => this;
+  toExport.globalScopeArrow = () => this;
 
-toExport.globalObject = {
-  globalMethod: () => this,
-  objectMethod: function () {
-    return this;
-  },
-  bindGlobalMethod: function () {
-    return toExport.globalScopeArrow.bind(toExport.globalObject)();
-  }
-};
+  toExport.globalObject = {
+    globalMethod: () => this,
+    objectMethod: function () {
+      return this;
+    },
+    bindGlobalMethod: function () {
+      return toExport.globalScopeArrow.bind(toExport.globalObject)();
+    }
+  };
+}
+
+const _ = new GScope();
 
 module.exports = toExport;
